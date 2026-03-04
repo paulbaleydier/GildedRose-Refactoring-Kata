@@ -56,16 +56,27 @@ class SulfurasStrategy(ItemStrategy):
         return
 
 
+class ConjuredStrategy(ItemStrategy):
+    def update(self, item):
+        self.decrease_quality(item, 2)
+        self.decrease_sell_in(item)
+        if item.sell_in < 0:
+            self.decrease_quality(item, 2)
+
+
 class ItemStrategyFactory:
     _strategies = {
         "Aged Brie": AgedBrieStrategy(),
         "Backstage passes to a TAFKAL80ETC concert": BackstagePassStrategy(),
         "Sulfuras, Hand of Ragnaros": SulfurasStrategy(),
     }
+    _conjured_strategy = ConjuredStrategy()
     _default_strategy = StandardStrategy()
 
     @classmethod
     def for_item(cls, item):
+        if item.name.startswith("Conjured"):
+            return cls._conjured_strategy
         return cls._strategies.get(item.name, cls._default_strategy)
 
 
