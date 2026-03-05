@@ -1,8 +1,7 @@
 import unittest
-from unittest.mock import Mock
 
 from python.domain import Item
-from python.domain.strategies import AgedBrieStrategy
+from python.domain.strategy.aged_brie_strategy import AgedBrieStrategy
 
 
 class TestAgedBrieStrategy(unittest.TestCase):

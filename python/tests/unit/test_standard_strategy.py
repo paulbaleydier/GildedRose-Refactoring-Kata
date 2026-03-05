@@ -1,7 +1,7 @@
 import unittest
 
 from python.domain import Item
-from python.domain.strategies import StandardStrategy
+from python.domain.strategy.standard_strategy import StandardStrategy
 
 
 class TestStandardStrategy(unittest.TestCase):

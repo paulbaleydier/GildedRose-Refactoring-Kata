@@ -1,7 +1,7 @@
 import unittest
 
-from python.domain.strategies import BackstagePassStrategy
 from python.domain import Item
+from python.domain.strategy.backstage_pass_strategy import BackstagePassStrategy
 
 
 class TestBackStagePassStrategy(unittest.TestCase):

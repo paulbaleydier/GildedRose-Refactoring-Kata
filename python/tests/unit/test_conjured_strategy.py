@@ -1,7 +1,7 @@
 import unittest
 
 from python.domain import Item
-from python.domain.strategies import ConjuredStrategy
+from python.domain.strategy.conjured_strategy import ConjuredStrategy
 
 
 class TestConjuredStrategy(unittest.TestCase):

@@ -1,7 +1,7 @@
 import unittest
 
 from python.domain import Item
-from python.domain.strategies import SulfurasStrategy
+from python.domain.strategy.sulfuras_strategy import SulfurasStrategy
 
 
 class TestSulfurasStrategy(unittest.TestCase):
