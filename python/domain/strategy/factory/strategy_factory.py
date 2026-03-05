@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
-
-from .strategies import (
-    AgedBrieStrategy,
-    BackstagePassStrategy,
-    ConjuredStrategy,
-    StandardStrategy,
-    SulfurasStrategy,
-)
+from python.domain.strategy.aged_brie_strategy import AgedBrieStrategy
+from python.domain.strategy.backstage_pass_strategy import BackstagePassStrategy
+from python.domain.strategy.conjured_strategy import ConjuredStrategy
+from python.domain.strategy.standard_strategy import StandardStrategy
+from python.domain.strategy.sulfuras_strategy import SulfurasStrategy
 
 
 class ItemStrategyFactory:
